@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Form</title>
+  <link rel="stylesheet" href="sign-up.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Contactez-nous</h1>
+        <p class="subtitle">Remplissez le formulaire ci-dessous et nous vous répondrons dans les plus brefs délais.</p>
+        
+        <form>
+          <div class="form">
+            <div class="content">
+              <label>Nom</label>
+              <input type="text" placeholder="Votre nom" required>
+            </div>
+            
+            <div class="content">
+              <label>Prénom</label>
+              <input type="text" placeholder="Votre prénom" required>
+            </div>
+          </div>
+          
+          <div class="content">
+            <label>Email</label>
+            <input type="email" placeholder="Votre adresse email" required>
+          </div>
+          
+          <div class="content">
+            <label>Téléphone</label>
+            <input type="tel" placeholder="Votre numéro de téléphone" required>
+          </div>
+          
+          <div class="content">
+            <label>Sujet</label>
+            <input type="text" placeholder="Sujet de votre message" >
+          </div>
+          
+          <div class="content">
+            <label>Message</label>
+            <textarea placeholder="Votre message"></textarea>
+          </div>
+          
+          <div class="checkbox">
+            <input type="checkbox" id="privacy">
+            <label for="privacy">J'accepte que mes données soient traitées conformément à la <a href="#">politique de confidentialité</a>.</label>
+          </div>
+          
+          <button type="submit" class="submit-btn">Envoyer</button>
+        </form>
+      </div>
+</body>
+</html>
