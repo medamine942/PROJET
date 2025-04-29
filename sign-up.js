@@ -5,7 +5,7 @@ const form = document.getElementById('contactForm');
 
     let isValid = true;
 
-    // Rinitialiser les messages
+    // Rinitialiser les messages d'ereur
     document.querySelectorAll('.error-message').forEach(el => el.textContent = '');
     document.querySelectorAll('input, textarea').forEach(el => el.classList.remove('error'));
 
