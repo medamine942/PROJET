@@ -1,15 +1,15 @@
 const form = document.getElementById('contactForm');
 
   form.addEventListener('submit', function(event) {
-    event.preventDefault(); // empêcher l'envoi par défaut
+    event.preventDefault(); // le formulaire ne s'envoie pas automatiquement quand on appui dessus
 
     let isValid = true;
 
-    // Reset messages
+    // Rinitialiser les messages
     document.querySelectorAll('.error-message').forEach(el => el.textContent = '');
     document.querySelectorAll('input, textarea').forEach(el => el.classList.remove('error'));
 
-    const nom = form.nom.value.trim();
+    const nom = form.nom.value.trim();//trim est utilisé pour eliminer les espaces
     const prenom = form.prenom.value.trim();
     const email = form.email.value.trim();
     const tel = form.telephone.value.trim();
@@ -50,7 +50,7 @@ const form = document.getElementById('contactForm');
       form.telephone.classList.add('error');
       isValid = false;
     } else if (!phonePattern.test(tel)) {
-      document.getElementById('telError').textContent = "Le téléphone doit contenir exactement 10 chiffres.";
+      document.getElementById('telError').textContent = "Le téléphone doit contenir exactement 12 chiffres.";
       form.telephone.classList.add('error');
       isValid = false;
     }
@@ -76,6 +76,6 @@ const form = document.getElementById('contactForm');
     }
 
     if (isValid) {
-      form.submit(); // tout est bon, on envoie le formulaire
+      form.submit(); // si tous est respecté le formulaire est envoye
     }
   });
